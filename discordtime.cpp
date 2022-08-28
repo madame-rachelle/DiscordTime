@@ -12,15 +12,9 @@ int main(int argc, char** argv)
 	istringstream iss(argv[1]);
 	iss >> num;
 
-	if (argc != 2)
+	if ((argc != 2) || (num == 0))
 	{
-		cout << "Please specify discord time as the first arg!" << endl;
-		return (2);
-	}
-
-	if (num==0)
-	{
-		cout << "Please specify discord time as a numerical snowflake!" << endl;
+		cout << "Please specify a numerical discord snowflake as the first arg!" << endl;
 		return (2);
 	}
 
